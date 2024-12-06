@@ -3,7 +3,7 @@ const {whatsapp} = require('../lib/whatsapp');
 const router = Router();
 
 router.post('/enviarMensaje', async(req, res)=>{
-  const tel = '+51xxxxxxxxxxxcolocarnúmerotelefonico'
+  const tel = '+59172893813'
   const chatId = tel.substring(1) + "@c.us";
   const number_details = await whatsapp.getNumberId(chatId);
   if(number_details){
