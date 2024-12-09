@@ -1,7 +1,7 @@
 
 import express, { Application } from 'express';
 import mensajeRoutes from '../routes/mensaje.routes';
-import cors from 'cors';
+import cors, { CorsOptions } from 'cors';
 import whatsapp from '../helpers/whatsapp';
 
 class Server {
@@ -24,7 +24,11 @@ class Server {
 
   middlewares(){
     //CORS
-    this.app.use(cors());
+    const origenesAutorizados = ['http://localhost', 'http://172.16.1.251'];
+    const opciones: CorsOptions = {
+      origin: origenesAutorizados
+    };
+    this.app.use(cors(opciones));
 
     //Lectura de Body
     this.app.use(express.json());

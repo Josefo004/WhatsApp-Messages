@@ -1,4 +1,4 @@
-import { Request, Response } from 'express'
+import { Request, Response } from 'express';
 import whatsapp from '../helpers/whatsapp';
 
 
@@ -24,9 +24,9 @@ export const postMensaje = async(req:Request, res:Response) => {
     });
   }
   else{
-    res.status(450).json({
+    res.status(403).json({
       res: " ERROR!! mensaje NO enviado a "+tel,
     })
   }
-  
+
 }

@@ -38,6 +38,12 @@ El BODY del POST debe tener esta estructura
     "mensaje":"NODEJS"
 }
 ```
+## Docker
+Para levantar el servicio con docker bastara hacer modificar las configuraciones como puertos y disparadores de `Dockerfile` y `docker-compose.yml` luego ejecutar
+```
+docker compose build
+docker compose up
+```
 
 ## README (original)
 **NOTE:** En caso de tener errores con la generaciòn del codigo qr e inicio de sesiòn con whatsapp web js prueba en cambiar las lineas de còdigo mencionadas en el video con las siguientes:
